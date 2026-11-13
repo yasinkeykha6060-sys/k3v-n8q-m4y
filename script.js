@@ -14,11 +14,12 @@ const CONFIG = [
   { type: "text", text: "نیایش من، تو را برای یک اتفاق زودگذر نمی‌خواهم. دوست داشتن برای من یعنی انتخاب، ماندن، تلاش و ساختن یک آینده قشنگ با هم.", buttonLabel: "ادامه" },
   { type: "text", text: "برای این مسیر جدی‌ام. می‌خواهم تا ته این راه کنار هم باشیم، روزهای سخت را با هم بگذرانیم، و بعدها با یاد همین روزها لبخند بزنیم.", buttonLabel: "ادامه" },
   { type: "text", text: "و اما یک اعتراف کوچولو...", buttonLabel: "ادامه" },
-  { type: "pineapple", text: "خانم من تویییی! ناناسی من! ❤️", buttonLabel: "ادامه" },
+  { type: "heart", text: "خانم من تویییی! ناناسی من! ❤️", buttonLabel: "ادامه" },
   { type: "text", text: "همان دختری که می‌خواهم لبخندش را ببینم، موفقیت‌هایش را جشن بگیرم، نازش را بکشم و گاهی فقط بگویم چقدر خوشحالم که دارمش.", buttonLabel: "ادامه" },
   { type: "text", text: "اگر هزار بار دیگر زندگی کنم، باز هم می‌خواهم تو را بشناسم و عاشق همین جزئیات قشنگت بشوم.", buttonLabel: "ادامه" },
   { type: "text", text: "نیایش عزیزم... شاید همه دنیا را نتوانم برایت بسازم، اما برای یک دنیای دونفره با عشق، احترام و صداقت قدم برمی‌دارم. تو یکی از عزیزترین دلیل‌های لبخند منی. ممنونم که هستی.", buttonLabel: "ادامه" },
   { type: "voice", text: "یه چیزی هست که می‌خوام با صدای خودم بهت بگم 🎧", buttonLabel: "بذار صدامو بشنوی 🎧" },
+  { type: "queen", text: "تو ملکه قلب منی نیایشم", buttonLabel: "ادامه" },
   { type: "still", text: "دوستت دارم، خیلی بیشتر از چیزی که این کلمات می‌تونن بگن....", buttonLabel: "ادامه" },
   { type: "finale", text: "می‌خوام نیایش بمونی برام تا ابد تا ابد تو فقط نیایش خودمی آخه ♥️", buttonLabel: "ادامه" }
 ];
@@ -135,7 +136,7 @@ function armReveal() {
   window.clearTimeout(revealTimer);
   const lines = [...stage.querySelectorAll(".line")];
   const kind = CONFIG[index].type;
-  if (!lines.length || reduced || kind === "big" || kind === "still" || kind === "finale") {
+  if (!lines.length || reduced || kind === "big" || kind === "still" || kind === "finale" || kind === "heart" || kind === "queen") {
     revealAll();
     return;
   }
@@ -147,6 +148,11 @@ function armReveal() {
   revealTimer = window.setTimeout(() => {
     textReady = true;
   }, lines.length * 180 + 700);
+}
+
+function backButton() {
+  if (index <= 0) return "";
+  return '<button class="back" type="button" id="back">برگشت</button>';
 }
 
 function render() {
@@ -172,6 +178,7 @@ function render() {
       escapeHtml(page.buttonLabel) +
       '</span> <span id="vmark"></span></button></div>' +
       '<div class="track"><span id="voiceFill"></span></div>' +
+      '<div class="nav">' + backButton() + "</div>" +
       (voiceFailed ? '<p class="line show">صدا الان باز نشد عزیزدلم، نامه همین‌جاست 💗</p><button class="go" type="button" id="next">ادامه</button>' : "") +
       "</div></section>";
     textReady = true;
@@ -182,19 +189,28 @@ function render() {
     });
   } else {
     const lines = sentences(page.text).map((line) => '<p class="line">' + highlight(line) + "</p>").join("");
-    const extra = page.type === "pineapple" ? '<div class="pineapple" aria-hidden="true">🍍</div>' : "";
-    const restart = page.type === "finale"
+    let extra = "";
+    if (page.type === "heart") extra = '<div class="mark-heart" aria-hidden="true">💗</div>';
+    if (page.type === "queen") extra = '<img class="queen-photo" src="assets/queen.jpg" alt="" onerror="this.hidden=true">';
+    const calm = page.type === "big" || page.type === "still" || page.type === "finale" || page.type === "heart" || page.type === "queen" ? " calm" : "";
+    const nextBtn = page.type === "finale"
       ? '<button class="restart" type="button" id="restart">↻ از اول</button>'
       : '<button class="go" type="button" id="next">' + escapeHtml(page.buttonLabel) + "</button>";
-    const calm = page.type === "big" || page.type === "still" || page.type === "finale" ? " calm" : "";
     stage.innerHTML =
-      '<section class="scene ' + page.type + calm + '"><div class="card">' + extra + lines + restart + "</div></section>";
+      '<section class="scene ' + page.type + calm + '"><div class="card">' + extra + lines +
+      '<div class="nav">' + backButton() + nextBtn + "</div></div></section>";
     armReveal();
   }
   const next = document.getElementById("next");
   if (next) next.addEventListener("click", (event) => {
     event.stopPropagation();
     advance();
+  });
+  const back = document.getElementById("back");
+  if (back) back.addEventListener("click", (event) => {
+    event.stopPropagation();
+    if (voiceEl && !voiceEl.paused) voiceEl.pause();
+    go(index - 1);
   });
   const restart = document.getElementById("restart");
   if (restart) restart.addEventListener("click", (event) => {
