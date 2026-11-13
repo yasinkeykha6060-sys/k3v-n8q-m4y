@@ -2,36 +2,24 @@ const CONFIG = [
   { type: "envelope", text: "نیایش جانم، یه چیزی برات ساختم 💌", buttonLabel: "بازش کن" },
   { type: "text", text: "برای قشنگ‌ترین اتفاق زندگی‌ام؛ نیایش من ♥️", buttonLabel: "ادامه" },
   { type: "text", text: "سلام نیایش من! ♥️😊\nخوش اومدی نفسم...", buttonLabel: "ادامه" },
-  { type: "text", text: "می‌دونی امممممم... بذار بریم صفحه بعدی، اونجا بهت می‌گم!", buttonLabel: "بعدی" },
-  { type: "text", text: "امممم... نه، بریم بعدی!", buttonLabel: "باشه بعدی 😄" },
-  { type: "text", text: "خب خب، صبر کن... نه، به نظرم باز هم بریم بعدی! 😅", buttonLabel: "بریم دیگه!" },
+  { type: "text", text: "می‌دونی امممم... بذار بریم صفحه بعدی، اونجا بهت می‌گم!", buttonLabel: "بعدی" },
   { type: "text", text: "رسیدیم...", buttonLabel: "ادامه" },
-  { type: "text", text: "می‌دونی عزیز دلم، بعضی آدم‌ها وارد زندگی آدم نمی‌شن که فقط بخشی از روزهاش باشن؛ میان و معنای خیلی چیزها رو عوض می‌کنن. میان و به روزهای معمولی رنگ می‌دن، به لحظه‌های ساده قشنگی می‌بخشن و کاری می‌کنن آدم برای فرداهاش لبخند داشته باشه.", buttonLabel: "ادامه" },
-  { type: "text", text: "برای من، اون آدم تویی؛ نیایش من!", buttonLabel: "ادامه" },
-  { type: "text", text: "از وقتی وارد زندگی‌ام شدی، انگار یک دنیای تازه به روی من باز شد. خدا یکی از قشنگ‌ترین هدیه‌هایی رو که می‌تونستم آرزو کنم، سر راهم قرار داد و اون هدیه تو بودی.", buttonLabel: "ادامه" },
-  { type: "text", text: "عزیز دلم، شاید هنوز نتونسته باشم حتی یک درصد از تمام دوست داشتنی که توی قلبم دارم رو با کلمات بهت نشون بدم؛ شاید هزاران جمله هم نتونن تمام احساسم رو توصیف کنن، اما می‌خوام یک چیز رو همیشه بدونی:", buttonLabel: "ادامه" },
+  { type: "text", text: "بعضی آدم‌ها میان و به روزهای معمولی رنگ می‌دن. برای من، اون آدم تویی؛ نیایش من!", buttonLabel: "ادامه" },
+  { type: "text", text: "از وقتی اومدی، یک دنیای تازه باز شد. تو قشنگ‌ترین هدیه‌ای بودی که سر راهم قرار گرفت.", buttonLabel: "ادامه" },
+  { type: "text", text: "هنوز حتی یک درصد از دوست داشتنی قلبم را با کلمه نگفته‌ام، اما یک چیز را همیشه بدان:", buttonLabel: "ادامه" },
   { type: "big", text: "من خیلی خیلی دوستت دارم، نیایشم!", buttonLabel: "ادامه" },
-  { type: "text", text: "نه فقط به خاطر لبخند قشنگت، نه فقط به خاطر مهربونی و دوست‌داشتنی بودنت، بلکه به خاطر تمام چیزی که هستی؛ به خاطر فکرت، شخصیتت، نگاهت به زندگی، قدرتت، تلاش‌هات، رویاها و حتی اون جزئیات کوچیکی که شاید خودت هم متوجهشون نباشی، اما برای من عزیزن.", buttonLabel: "ادامه" },
-  { type: "text", text: "من به داشتن تو افتخار می‌کنم. به اینکه می‌تونم بگم چنین دختر دوست‌داشتنی‌ای وارد زندگی من شده، به اینکه می‌تونم شاهد رشد کردنت باشم، از موفقیت‌هات خوشحال بشم و برای آرزوهات از ته قلبم دعا کنم.", buttonLabel: "ادامه" },
-  { type: "text", text: "دلم می‌خواد همیشه بدونی که من فقط عاشق روزهای خوب و خنده‌هات نیستم؛ روزهایی هم که خسته‌ای، دلت گرفته، نگرانی یا حتی حوصله هیچ‌چیزی رو نداری، برام به همون اندازه عزیزی.", buttonLabel: "ادامه" },
-  { type: "text", text: "نمی‌خوام فقط همراه روزهای آفتابی‌ات باشم؛ دلم می‌خواد وقتی آسمون دلت ابری شد هم بدونی کسی هست که با تمام وجودش هواتو داره.", buttonLabel: "ادامه" },
-  { type: "text", text: "می‌خوام مراقبت باشم، نه اینکه محدودت کنم؛ پشتت باشم، نه اینکه جلوی راهت رو بگیرم؛ بهت آرامش بدم، نه اینکه باری به دوشت اضافه کنم.", buttonLabel: "ادامه" },
-  { type: "text", text: "می‌خوام در کنار هم رشد کنیم، از هم یاد بگیریم، برای هم انگیزه باشیم و دست در دست هم از پله‌های زندگی بالا بریم.", buttonLabel: "ادامه" },
-  { type: "text", text: "نیایش من، من تو رو برای یک اتفاق زودگذر نمی‌خوام.", buttonLabel: "ادامه" },
-  { type: "text", text: "وقتی از دوست داشتن حرف می‌زنم، منظورم فقط گفتن چند جمله قشنگ و فرستادن قلب و بوسه نیست؛ منظورم انتخاب کردنه، موندنه، تلاش کردنه، مراقبت کردنه و ساختن یک آینده قشنگ در کنار همدیگه‌ست.", buttonLabel: "ادامه" },
-  { type: "text", text: "من برای این مسیر جدی‌ام. دلم می‌خواد تا ته این راه، با رضایت و خواست قلبی هر دومون، کنار هم باشیم؛ روزهای سخت رو با هم پشت سر بذاریم و روزهای قشنگ رو با هم جشن بگیریم.", buttonLabel: "ادامه" },
-  { type: "text", text: "می‌خوام همیشه بهت افتخار کنم و کاری کنم تو هم به بودنت در کنار من افتخار کنی.", buttonLabel: "ادامه" },
-  { type: "text", text: "می‌خوام وقتی به عقب نگاه می‌کنیم، کلی خاطره داشته باشیم که با یادآوریشون لبخند روی لب‌هامون بشینه؛ از همین شیطنت‌های کوچیک و صفحه‌صفحه جلو رفتن گرفته تا تمام رویاهایی که قراره با هم بهشون برسیم.", buttonLabel: "ادامه" },
+  { type: "text", text: "نه فقط برای لبخند و مهربانی‌ات؛ برای تمام چیزی که هستی. برای فکرت، نگاهت، تلاش‌هات و همان جزئیات کوچکی که برای من عزیزند.", buttonLabel: "ادامه" },
+  { type: "text", text: "به داشتنت افتخار می‌کنم. روزهایی هم که خسته‌ای یا دلت گرفته، به همان اندازه عزیزی؛ وقتی آسمان دلت ابری شد، کسی هست که هوات را دارد.", buttonLabel: "ادامه" },
+  { type: "text", text: "می‌خواهم مراقبت باشم، نه اینکه محدودت کنم. پشتت باشم، بهت آرامش بدهم، و دست در دست هم از پله‌های زندگی بالا برویم.", buttonLabel: "ادامه" },
+  { type: "text", text: "نیایش من، تو را برای یک اتفاق زودگذر نمی‌خواهم. دوست داشتن برای من یعنی انتخاب، ماندن، تلاش و ساختن یک آینده قشنگ با هم.", buttonLabel: "ادامه" },
+  { type: "text", text: "برای این مسیر جدی‌ام. می‌خواهم تا ته این راه کنار هم باشیم، روزهای سخت را با هم بگذرانیم، و بعدها با یاد همین روزها لبخند بزنیم.", buttonLabel: "ادامه" },
   { type: "text", text: "و اما یک اعتراف کوچولو...", buttonLabel: "ادامه" },
-  { type: "pineapple", text: "خانم من تویییی! ناناسی من! 🥹❤️", buttonLabel: "ادامه" },
-  { type: "text", text: "همون دختری که دلم می‌خواد همیشه لبخندش رو ببینم، موفقیت‌هاش رو جشن بگیرم، نازش رو بکشم، براش هدیه‌های کوچولو بگیرم، غافلگیرش کنم و گاهی فقط بهش بگم چقدر خوشحالم که دارمش.", buttonLabel: "ادامه" },
-  { type: "text", text: "اگر قرار باشه هزار بار دیگه زندگی کنم، باز هم دلم می‌خواد فرصت شناختن تو رو داشته باشم؛ باز هم دلم می‌خواد باهات حرف بزنم، بخندم، خاطره بسازم و عاشق همین جزئیات قشنگ وجودت بشم.", buttonLabel: "ادامه" },
-  { type: "text", text: "نیایش عزیزم...", buttonLabel: "ادامه" },
-  { type: "text", text: "شاید نتونم تمام دنیا رو برات به زیباترین شکل ممکن بسازم، اما می‌تونم قول بدم برای ساختن یک دنیای قشنگ دونفره، با عشق، احترام، صداقت و تلاش قدم بردارم.", buttonLabel: "ادامه" },
-  { type: "text", text: "تو برای من فقط یک آدم دوست‌داشتنی نیستی؛ تو یکی از عزیزترین دلیل‌های لبخند منی.", buttonLabel: "ادامه" },
-  { type: "text", text: "ممنونم که اومدی، ممنونم که هستی و ممنونم که اجازه دادی بخشی از دنیای قشنگت باشم.", buttonLabel: "ادامه" },
+  { type: "pineapple", text: "خانم من تویییی! ناناسی من! ❤️", buttonLabel: "ادامه" },
+  { type: "text", text: "همان دختری که می‌خواهم لبخندش را ببینم، موفقیت‌هایش را جشن بگیرم، نازش را بکشم و گاهی فقط بگویم چقدر خوشحالم که دارمش.", buttonLabel: "ادامه" },
+  { type: "text", text: "اگر هزار بار دیگر زندگی کنم، باز هم می‌خواهم تو را بشناسم و عاشق همین جزئیات قشنگت بشوم.", buttonLabel: "ادامه" },
+  { type: "text", text: "نیایش عزیزم... شاید همه دنیا را نتوانم برایت بسازم، اما برای یک دنیای دونفره با عشق، احترام و صداقت قدم برمی‌دارم. تو یکی از عزیزترین دلیل‌های لبخند منی. ممنونم که هستی.", buttonLabel: "ادامه" },
   { type: "voice", text: "یه چیزی هست که می‌خوام با صدای خودم بهت بگم 🎧", buttonLabel: "بذار صدامو بشنوی 🎧" },
-  { type: "text", text: "دوستت دارم، خیلی بیشتر از چیزی که این کلمات می‌تونن بگن....", buttonLabel: "ادامه" },
+  { type: "still", text: "دوستت دارم، خیلی بیشتر از چیزی که این کلمات می‌تونن بگن....", buttonLabel: "ادامه" },
   { type: "finale", text: "می‌خوام نیایش بمونی برام تا ابد تا ابد تو فقط نیایش خودمی آخه ♥️", buttonLabel: "ادامه" }
 ];
 
@@ -146,7 +134,8 @@ function revealAll() {
 function armReveal() {
   window.clearTimeout(revealTimer);
   const lines = [...stage.querySelectorAll(".line")];
-  if (!lines.length || reduced) {
+  const kind = CONFIG[index].type;
+  if (!lines.length || reduced || kind === "big" || kind === "still" || kind === "finale") {
     revealAll();
     return;
   }
@@ -177,13 +166,11 @@ function render() {
     textReady = true;
   } else if (page.type === "voice") {
     stage.innerHTML =
-      '<section class="scene voice-scene"><div class="card">' +
+      '<section class="scene voice-scene calm"><div class="card">' +
       '<h1 class="title">' + highlight(page.text) + "</h1>" +
       '<div class="controls"><button class="go play" type="button" id="voiceBtn"><span id="voiceLabel">' +
       escapeHtml(page.buttonLabel) +
       '</span> <span id="vmark"></span></button></div>' +
-      '<div class="eq" id="eq" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>' +
-      '<div class="beat" id="beat">💗</div>' +
       '<div class="track"><span id="voiceFill"></span></div>' +
       (voiceFailed ? '<p class="line show">صدا الان باز نشد عزیزدلم، نامه همین‌جاست 💗</p><button class="go" type="button" id="next">ادامه</button>' : "") +
       "</div></section>";
@@ -199,8 +186,9 @@ function render() {
     const restart = page.type === "finale"
       ? '<button class="restart" type="button" id="restart">↻ از اول</button>'
       : '<button class="go" type="button" id="next">' + escapeHtml(page.buttonLabel) + "</button>";
+    const calm = page.type === "big" || page.type === "still" || page.type === "finale" ? " calm" : "";
     stage.innerHTML =
-      '<section class="scene ' + page.type + '"><div class="card">' + extra + lines + restart + "</div></section>";
+      '<section class="scene ' + page.type + calm + '"><div class="card">' + extra + lines + restart + "</div></section>";
     armReveal();
   }
   const next = document.getElementById("next");
@@ -320,7 +308,7 @@ function setVoiceUi(playing) {
   const mark = document.getElementById("vmark");
   if (eq) eq.classList.toggle("on", playing);
   if (beat) beat.classList.toggle("on", playing);
-  if (label) label.textContent = CONFIG[31].buttonLabel;
+  if (label) label.textContent = CONFIG.find((item) => item.type === "voice").buttonLabel;
   if (mark) mark.textContent = playing ? "⏸" : (voiceEl && voiceEl.currentTime > 0 && !voiceEl.ended ? "▶" : "");
 }
 

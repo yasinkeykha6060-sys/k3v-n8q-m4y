@@ -251,11 +251,25 @@ main {
   text-shadow: 0 0 12px rgba(232, 74, 127, 0.45);
 }
 
-.big .line, .finale .line {
+.big .line, .still .line, .finale .line {
   font-family: Lalezar, Harmattan, Tahoma, sans-serif;
   font-size: clamp(1.7rem, 6vw, 2.7rem);
   line-height: 1.7;
   text-wrap: balance;
+}
+
+.calm,
+.calm .line,
+.calm .line.show,
+.calm .go,
+.voice-scene .go {
+  animation: none;
+}
+
+.calm .line,
+.calm .line.show {
+  opacity: 1;
+  transform: none;
 }
 
 .title {
@@ -280,7 +294,8 @@ main {
   font-weight: 700;
 }
 
-.go { margin-top: 18px; animation: pulse 2.4s ease-in-out infinite; }
+.go { margin-top: 18px; }
+.scene:not(.calm):not(.voice-scene) .go { animation: pulse 2.4s ease-in-out infinite; }
 
 .restart {
   margin-top: 22px;
